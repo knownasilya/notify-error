@@ -9,8 +9,8 @@ export default Ember.Route.extend({
     save() {
       var post = this.get('community');
       return post.save()
-        .then(res => this.notify.success('saved'))
-        .catch(err => this.notify.error(err, 'error'));
+        .then(res => alert('saved'))
+        .catch(err => alert(err));
     }
   }
 });
