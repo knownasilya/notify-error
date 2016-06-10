@@ -1,0 +1,5 @@
+{{#each post.top.comments as |comment|}}
+  <h3 class="{{if comment.approved 'approved'}}">{{comment.name}}</h3>
+  <p>Approved: {{comment.approved}}</p>
+  <button {{action 'approveItem' comment post}}>Toggle Approve</button>
+{{/each}}

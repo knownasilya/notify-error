@@ -1,3 +1,7 @@
 <h2 id="title">Welcome to Ember</h2>
-
+{{#if approvedComments}}
+  {{post-item post=community approve=(route-action 'save')}}
+{{else}}
+  none approved
+{{/if}}
 {{outlet}}
